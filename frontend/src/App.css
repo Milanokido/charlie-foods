@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('https://customer-assets.emergentagent.com/job_burgers-orsay/artifacts/fnr5k906_ChatGPT%20Image%2020%20sept.%202025%2C%2015_44_16.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.charlie-site {
+  min-height: 100vh;
+}
+
+/* Navigation */
+.navbar {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar button:hover {
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: none !important;
+  z-index: 5;
+}
+
+.hero-section::before {
+  display: none;
+}
+
+/* Hero Background Base Styles */
+.hero-bg-mobile {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Navigation */
+.navbar {
+  background: #5A2C2C !important;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar::before {
+  display: none;
+}
+
+/* Main Sections */
+.main-section {
+  background: rgba(0, 0, 0, 0.85) !important;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(229, 6, 19, 0.1);
+  transition: all 0.3s ease;
+}
+
+.main-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* Colors */
+.btn-primary, .bg-primary {
+  background-color: #E30613 !important;
+  border-color: #E30613 !important;
+}
+
+.btn-primary:hover, .bg-primary:hover {
+  background-color: #B8050F !important;
+  border-color: #B8050F !important;
+}
+
+.text-accent, .accent {
+  color: #E30613 !important;
+}
+
+.border-accent {
+  border-color: #E30613 !important;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button Animations */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Gallery Hover Effects */
+.gallery-image {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Card Animations */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Link Hover Effects */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #E30613 !important;
+}
+
+/* Footer */
+footer {
+  background: #5A2C2C !important;
+  position: relative;
+  z-index: 10;
+}
+
+footer::before {
+  display: none;
+}
+
+/* Ensure sections have background for better readability */
+section:not(.hero-section) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Override background for sections to show the wall */
+section:not(.hero-section)::before {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+  
+  .navbar .hidden {
+    display: none;
+  }
+  
+  /* Mobile Hero Background Optimization */
+  .hero-bg-mobile {
+    background-size: cover !important;
+    background-position: center 40% !important; /* Position slightly higher to show food better */
+    background-repeat: no-repeat !important;
+    background-color: #1a1a1a; /* Dark fallback background */
+  }
+  
+  /* Add gradient overlay to fill empty areas and maintain visual consistency */
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(90, 44, 44, 0.4) 0%, 
+      rgba(227, 6, 19, 0.2) 50%, 
+      rgba(90, 44, 44, 0.4) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Ensure content stays above backgrounds */
+  .hero-section .relative.z-10 {
+    z-index: 10;
+  }
+  
+  /* Fix mobile layout spacing */
+  body {
+    padding-bottom: 120px; /* Space for fixed mobile button */
+  }
+  
+  /* Prevent text overflow on mobile */
+  .container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Improve mobile card layout */
+  .main-section {
+    margin-bottom: 1rem;
+  }
+  
+  /* Fix mobile navigation */
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Ensure buttons are touch-friendly */
+  button {
+    min-height: 44px;
+  }
+  
+  /* Fix text alignment issues */
+  .text-center {
+    text-align: center !important;
+  }
+  
+  /* Prevent horizontal scrolling */
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+  
+  /* Further reduce spacing on very small screens */
+  .hero-section {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E30613;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8050F;
+}
+
+/* Text Selection */
+::selection {
+  background: #E30613;
+  color: white;
+}
+
+/* Focus States */
+button:focus, input:focus {
+  outline: 2px solid #E30613;
+  outline-offset: 2px;
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Micro-interactions */
+.interactive {
+  transition: all 0.2s ease;
+}
+
+.interactive:hover {
+  transform: scale(1.02);
+}
+
+/* Floating Cart Button Animations */
+@keyframes bounce-in {
+  0% { 
+    transform: scale(0.3); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(1.05); 
+  }
+  70% { 
+    transform: scale(0.9); 
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  80%, 100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.cart-button-enter {
+  animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.cart-pulse-ring {
+  animation: pulse-ring 0.6s ease-out;
+}
+
+/* Ensure floating button is above other elements */
+.floating-cart-button {
+  z-index: 9999 !important;
+}
+
+/* Safe area handling for mobile devices */
+@supports (padding: max(0px)) {
+  .floating-cart-button {
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Hide Emergent preview message */
+div[style*="position: fixed"][style*="bottom"] {
+  display: none !important;
+}
+
+/* Hide preview banner with text content */
+div:has(*:contains("frontend only preview")),
+div:has(*:contains("Spinning up Servers")),
+div:has(*:contains("Please explore the app")),
+div:has(*:contains("made with emergent")) {
+  display: none !important;
+}
+
+/* Alternative approach using text content */
+*:contains("This is the frontend only preview"),
+*:contains("made with emergent"),
+*:contains("Minimize") {
+  display: none !important;
+}
