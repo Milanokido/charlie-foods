@@ -49,7 +49,7 @@ const CharlieHome = () => {
     // Check if item needs customization (Tacos, Sandwiches, Frites, Bowls, Tex-Mex items, or Tex-Mex Box)
     const needsCustomization = (
       (categoryName.includes('Tacos') && !item.name.toLowerCase().includes('supplément')) ||
-      (categoryName.includes('Sandwichs Baguette') && !item.name.toLowerCase().includes('supplément')) ||
+      (categoryName.includes('Sandwichs') && !item.name.toLowerCase().includes('supplément')) ||
       (categoryName.includes('Frites')) ||
       (categoryName.includes('Bowls')) ||
       (categoryName.includes('Tex Mex') && item.name.includes('Box')) ||

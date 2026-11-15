@@ -13,7 +13,7 @@ const CustomizationModal = ({ isOpen, onClose, item, category, onAddToCart }) =>
   if (!isOpen || !item) return null;
 
   const isTacos = category?.name?.includes('Tacos');
-  const isSandwich = category?.name?.includes('Sandwichs Baguette');
+  const isSandwich = category?.name?.includes('Sandwichs');
   const isFrites = category?.name?.includes('Frites');
   const isBowls = category?.name?.includes('Bowls');
   const isTexMexBox = category?.name?.includes('Tex Mex') && item?.name?.includes('Box');
